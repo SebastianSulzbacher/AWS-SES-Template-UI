@@ -5,6 +5,7 @@
   "dependencies": {
     "@material-ui/core": "^3.1.2",
     "@material-ui/icons": "^3.0.1",
+    "aws-sdk": "^2.329.0",
     "codemirror": "^5.40.2",
     "react": "^16.5.2",
     "react-codemirror2": "^5.1.0",
@@ -32,6 +33,7 @@
   ],
   "homepage": "./",
   "devDependencies": {
+    "@types/node": "^10.11.4",
     "electron": "^3.0.2"
   }
 }
