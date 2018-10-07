@@ -3,10 +3,11 @@ import Drawer from '@material-ui/core/Drawer';
 import Divider from '@material-ui/core/Divider';
 import Paper from '@material-ui/core/Paper';
 import { withStyles } from '@material-ui/core/styles';
+import Menu from './Menu';
 
 const styles = theme => ({
     drawerPaper: {
-        position:"relative"
+        position:"fixed"
     },
 
     toolbar: theme.mixins.toolbar
@@ -20,19 +21,12 @@ class Sidebar extends Component {
         
         return (  
             <>
-                
                 <Drawer variant="permanent"
                         classes={{
                             paper: classes.drawerPaper,
                           }} >
                     <div className="toolbar">
-                        <Paper>
-                        Menu 1
-                        <Divider />
-                        Menu 2
-                        <Divider />
-                        Menu 3
-                        </Paper>
+                        <Menu />
                     </div>
                     
                 </Drawer>

@@ -8,7 +8,7 @@ const drawerWidth = 200;
 
 const styles = theme => ({
     appBarShift: {
-        marginLeft: `300px`,
+        marginLeft: drawerWidth,
         width: `calc(100% - ${drawerWidth}px)`,
         transition: theme.transitions.create(['width', 'margin'], {
           easing: theme.transitions.easing.sharp,
@@ -18,16 +18,17 @@ const styles = theme => ({
 })
 
 class Header extends Component {
-
+    
     render() {
+        const { classes } = this.props
         return (  
-            <AppBar position="relative">
-                <Toolbar>
-                    <Typography variant="title" color="inherit">
-                        AWS SES Template Manager
-                    </Typography>
-                </Toolbar>
-            </AppBar>
+            
+            <Toolbar className={classes.appBarShift}>
+                <Typography variant="title" color="inherit" >
+                    AWS SES Template Manager
+                </Typography>
+            </Toolbar>
+
         ) 
     }
 
